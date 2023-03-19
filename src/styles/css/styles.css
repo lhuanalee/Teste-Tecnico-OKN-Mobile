@@ -256,7 +256,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: space-between;
   align-items: center;
   width: 45%;
-  min-width: 150px;
+  min-width: 142px;
   max-width: 158px;
   height: 135px;
   padding: 0 20px 13px;
@@ -373,7 +373,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  max-width: 500px;
+  max-width: 470px;
   margin-top: 27px;
   flex-wrap: wrap;
   gap: 38px;
@@ -383,7 +383,7 @@ body::-webkit-scrollbar-thumb {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-width: 144px;
+  min-width: 132px;
   padding: 8px 20px 23px;
   gap: 10px;
   border: 1px solid transparent;
@@ -391,7 +391,7 @@ body::-webkit-scrollbar-thumb {
   background-color: #0f2a40;
 }
 .main__section-careers .careers__list .careers__item .careers__subtitle {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
   font-family: "Tungsten";
   letter-spacing: 0.08em;

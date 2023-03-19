@@ -14,7 +14,7 @@
   .careers__list {
     @include flex-box(flex, row, center, center);
 
-    max-width: 500px;
+    max-width: 470px;
 
     margin-top: 27px;
 
@@ -24,7 +24,7 @@
     .careers__item {
       @include flex-box(flex, column, center, center);
 
-      min-width: 144px;
+      min-width: 132px;
 
       padding: 8px 20px 23px;
 
@@ -36,7 +36,7 @@
       background-color: $color-primary;
 
       .careers__subtitle {
-        @include text(12px, 400);
+        @include text(10px, 400);
 
         font-family: "Tungsten";
         letter-spacing: 0.08em;

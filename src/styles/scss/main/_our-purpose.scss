@@ -1,0 +1,123 @@
+.main__section-our-purpose {
+  @include flex-box(flex, column, center, center);
+
+  background-color: $color-white;
+
+  .our-purpose__container {
+    @include flex-box(flex, column, center, center);
+
+    width: 100%;
+    max-width: 565px;
+
+    padding: 35px 35px 53px;
+
+    border: 1px solid transparent;
+    border-radius: 50px;
+
+    background-color: $color-primary;
+
+    .our-purpose__title {
+      @include text(30px, 400);
+
+      font-family: "Tungsten";
+      letter-spacing: 0.08em;
+
+      color: $color-white;
+    }
+
+    .our-purpose__image {
+      width: 50%;
+      max-width: 124px;
+
+      margin-top: 18px;
+    }
+
+    .our-purpose__description {
+      @include text(18px, 400);
+
+      margin-top: 30px;
+
+      text-align: center;
+
+      color: $color-white;
+    }
+  }
+
+  .our-purpose__form {
+    @include flex-box(flex, column, center, center);
+
+    width: 100%;
+
+    margin-top: 76px;
+
+    gap: 24px;
+
+    .our-purpose__form-title {
+      @include text(30px, 600);
+
+      margin-bottom: 6px;
+
+      font-family: "TungstenLight";
+      letter-spacing: 0.02em;
+    }
+
+    .our-purpose__input {
+      width: 80%;
+      max-width: 504px;
+
+      padding: 12px 11px;
+
+      border: 1px solid $color-black;
+      border-radius: 10px;
+
+      &::placeholder {
+        @include text(14px, 400);
+        color: $color-black;
+      }
+    }
+
+    .our-purpose__textarea {
+      width: 80%;
+      max-width: 504px;
+
+      padding: 12px 11px;
+
+      border: 1px solid $color-black;
+      border-radius: 10px;
+
+      &::placeholder {
+        font-family: "Inter", sans-serif;
+        color: $color-black;
+        resize: none;
+      }
+    }
+
+    .our-purpose__button {
+      @include text(20px, 400);
+
+      width: 35%;
+      min-width: 126px;
+      max-width: 210px;
+
+      margin-bottom: 48px;
+      padding: 7px;
+
+      border: 1px solid transparent;
+      border-radius: 10px;
+
+      font-family: "TungstenLight";
+
+      color: $color-white;
+
+      background-color: $color-black;
+
+      cursor: pointer;
+
+      &:hover {
+        background-color: $color-purple;
+
+        transition: 1s;
+      }
+    }
+  }
+}

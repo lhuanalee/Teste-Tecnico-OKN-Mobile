@@ -1,0 +1,576 @@
+html,
+body,
+div,
+span,
+iframe,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+small,
+strong,
+center,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+article,
+embed,
+figure,
+footer,
+header,
+nav,
+section,
+video {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-style: none;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 7px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+body::-webkit-scrollbar-thumb {
+  border: 3px solid #0f2a40;
+  border-radius: 20px;
+  background-color: #0f2a40;
+}
+
+@font-face {
+  font-family: "Tungsten";
+  src: url("../../assets/fonts/Tungsten-Semibold.otf") format("opentype");
+}
+@font-face {
+  font-family: "TungstenLight";
+  src: url("../../assets/fonts/Tungsten-Light.otf") format("opentype");
+}
+@font-face {
+  font-family: "TungstenBold";
+  src: url("../../assets/fonts/Tungsten-Bold.otf") format("opentype");
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  padding: 11px 24px;
+  background-color: #000202;
+}
+.header__container .header__logo-figure .header__logo-image {
+  width: 55px;
+  height: 22px;
+}
+.header__container .header__search-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.header__container .header__search-menu .header__search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.header__container .header__search-menu .header__search .search__input {
+  width: 140px;
+  border: none;
+  background-color: transparent;
+}
+.header__container .header__search-menu .header__search .search__input::placeholder {
+  color: transparent;
+}
+.header__container .header__search-menu .header__search .search__button {
+  width: 21px;
+  height: 23px;
+  border: none;
+  background-color: transparent;
+  object-fit: cover;
+}
+.header__container .header__search-menu .header__search .search__button .search__image {
+  width: 20px;
+  height: 20px;
+}
+.header__container .header__navigation {
+  z-index: 2;
+}
+.header__container .header__navigation .navigation__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 45vw;
+  padding: 10px 12px 0 21px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #63a4c4;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in;
+  overflow: auto;
+  z-index: 1;
+}
+.header__container .header__navigation .navigation__list.active {
+  transform: translateX(0);
+}
+.header__container .header__navigation .navigation__list .navigation__item-close {
+  margin-left: auto;
+}
+.header__container .header__navigation .navigation__list .navigation__item-close .navigation__image-close {
+  width: 20px;
+  height: 20px;
+}
+.header__container .header__navigation .navigation__list .navigation__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 18px;
+  font-weight: 400;
+  width: max-content;
+  padding-bottom: 12px;
+  font-family: "TungstenLight";
+  color: #ffffff;
+}
+
+.main__container .main__section-carousel .carousel__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.main__container .main__section-carousel .carousel__list::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  background: linear-gradient(180.12deg, #000000 0.1%, rgba(0, 0, 0, 0) 65.3%);
+  transform: rotate(-180deg);
+}
+.main__container .main__section-carousel .carousel__list .carousel__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main__container .main__section-carousel .carousel__list .carousel__item .carousel__images {
+  width: 100vw;
+  object-fit: cover;
+}
+.main__container .main__section-carousel .carousel__list .carousel__item .carousel__article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 80%;
+  gap: 15px;
+  position: absolute;
+  bottom: 50px;
+  z-index: 1;
+}
+.main__container .main__section-carousel .carousel__list .carousel__item .carousel__article .carousel__title {
+  font-size: 32px;
+  font-weight: 400;
+  font-family: "TungstenBold";
+  color: #ffffff;
+}
+.main__container .main__section-carousel .carousel__list .carousel__item .carousel__article .carousel__description {
+  font-size: 11px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.main__container .main__section-carousel .carousel__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 30px;
+  gap: 10px;
+  position: absolute;
+  bottom: 5px;
+  z-index: 1;
+}
+.main__container .main__section-carousel .carousel__actions .actions__button--one,
+.main__container .main__section-carousel .carousel__actions .actions__button--two,
+.main__container .main__section-carousel .carousel__actions .actions__button--three,
+.main__container .main__section-carousel .carousel__actions .actions__button--four {
+  width: 9px;
+  height: 9px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  background-color: transparent;
+}
+
+.main__section-services {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 24px;
+  background: linear-gradient(180deg, #091d2d -1.01%, #143752 40.43%, #43729a 71.61%, #7fd1eb 118.33%);
+}
+.main__section-services .services__span {
+  color: #ffffff;
+}
+.main__section-services .services__title {
+  margin-top: 2px;
+  font-family: "TungstenBold";
+  color: #ffffff;
+}
+.main__section-services .services__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 720px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+.main__section-services .services__list .services__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 45%;
+  min-width: 150px;
+  max-width: 158px;
+  height: 135px;
+  padding: 0 20px 13px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: #ffffff;
+}
+.main__section-services .services__list .services__item .services__item-gif {
+  width: 37px;
+  height: 37px;
+}
+.main__section-services .services__list .services__item .services__item-title:nth-child(6) {
+  font-size: 8px;
+}
+.main__section-services .services__list .services__item .services__item-title {
+  font-size: 10px;
+  font-weight: 400;
+  font-family: "Tungsten";
+  text-align: center;
+}
+.main__section-services .services__list .services__item .services__item-description {
+  font-size: 8px;
+  font-weight: 500;
+  text-align: center;
+}
+.main__section-services .services__list .services__item .services__know-more {
+  display: flex;
+  gap: 3px;
+}
+.main__section-services .services__list .services__item .services__know-more:hover .know-more__title {
+  border: 1px solid #963596;
+  color: #ffffff;
+  background-color: #963596;
+  transition: 1s;
+}
+.main__section-services .services__list .services__item .services__know-more:hover .know-more__figure {
+  border: 1px solid #963596;
+  background-color: #963596;
+  transition: 1s;
+}
+.main__section-services .services__list .services__item .services__know-more:hover .know-more__arrow {
+  filter: invert(100%);
+  transition: 1s;
+}
+.main__section-services .services__list .services__item .services__know-more .know-more__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+  padding: 0 6px;
+  font-size: 8px;
+  font-weight: 400;
+  border: 1px solid #000202;
+  border-radius: 100px;
+}
+.main__section-services .services__list .services__item .services__know-more .know-more__figure {
+  padding: 0 4px;
+  border: 1px solid #000202;
+  border-radius: 100px;
+  background-color: #ffffff;
+}
+.main__section-services .services__list .services__item .services__know-more .know-more__figure .know-more__arrow {
+  background-color: transparent;
+}
+
+.main__section-who-are {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 35px;
+}
+.main__section-who-are .who-are__title {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "TungstenBold";
+}
+.main__section-who-are .who-are__figure {
+  width: 70%;
+  max-width: 230px;
+  margin-top: 15px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.main__section-who-are .who-are__figure .who-are__image {
+  width: 100%;
+  border-radius: 10px;
+}
+.main__section-who-are .who-are__description {
+  font-size: 12px;
+  font-weight: 400;
+  max-width: 555px;
+  margin-top: 33px;
+  text-align: center;
+}
+
+.main__section-careers {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 35px 24px;
+  background-color: #f2f2f2;
+}
+.main__section-careers .careers__title {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Tungsten";
+}
+.main__section-careers .careers__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  max-width: 500px;
+  margin-top: 27px;
+  flex-wrap: wrap;
+  gap: 38px;
+}
+.main__section-careers .careers__list .careers__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 144px;
+  padding: 8px 20px 23px;
+  gap: 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background-color: #0f2a40;
+}
+.main__section-careers .careers__list .careers__item .careers__subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Tungsten";
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+
+.main__section-our-purpose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+}
+.main__section-our-purpose .our-purpose__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 565px;
+  padding: 35px 35px 53px;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: #0f2a40;
+}
+.main__section-our-purpose .our-purpose__container .our-purpose__title {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Tungsten";
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+.main__section-our-purpose .our-purpose__container .our-purpose__image {
+  width: 50%;
+  max-width: 124px;
+  margin-top: 18px;
+}
+.main__section-our-purpose .our-purpose__container .our-purpose__description {
+  font-size: 18px;
+  font-weight: 400;
+  margin-top: 30px;
+  text-align: center;
+  color: #ffffff;
+}
+.main__section-our-purpose .our-purpose__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 76px;
+  gap: 24px;
+}
+.main__section-our-purpose .our-purpose__form .our-purpose__form-title {
+  font-size: 30px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-family: "TungstenLight";
+  letter-spacing: 0.02em;
+}
+.main__section-our-purpose .our-purpose__form .our-purpose__input {
+  width: 80%;
+  max-width: 504px;
+  padding: 12px 11px;
+  border: 1px solid #000202;
+  border-radius: 10px;
+}
+.main__section-our-purpose .our-purpose__form .our-purpose__input::placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  color: #000202;
+}
+.main__section-our-purpose .our-purpose__form .our-purpose__textarea {
+  width: 80%;
+  max-width: 504px;
+  padding: 12px 11px;
+  border: 1px solid #000202;
+  border-radius: 10px;
+}
+.main__section-our-purpose .our-purpose__form .our-purpose__textarea::placeholder {
+  font-family: "Inter", sans-serif;
+  color: #000202;
+  resize: none;
+}
+.main__section-our-purpose .our-purpose__form .our-purpose__button {
+  font-size: 20px;
+  font-weight: 400;
+  width: 35%;
+  min-width: 126px;
+  max-width: 210px;
+  margin-bottom: 48px;
+  padding: 7px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-family: "TungstenLight";
+  color: #ffffff;
+  background-color: #000202;
+  cursor: pointer;
+}
+.main__section-our-purpose .our-purpose__form .our-purpose__button:hover {
+  background-color: #963596;
+  transition: 1s;
+}
+
+.footer__container {
+  border-top: 2px solid #000202;
+}
+.footer__container .footer__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+}
+.footer__container .footer__information .footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+}
+.footer__container .footer__information .footer__list .footer__item-title {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.footer__container .footer__information .footer__list .footer__item {
+  font-size: 10px;
+  font-weight: 400;
+  max-width: 119px;
+}
+.footer__container .footer__information .footer__container-social-media {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 7px;
+}
+.footer__container .footer__information .footer__container-social-media .footer__item-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+.footer__container .footer__information .footer__container-social-media .footer__list-social-media {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 19px;
+  gap: 6px;
+}
+.footer__container .footer__information .footer__container-social-media .footer__list-social-media .footer__item-social-media {
+  width: 15px;
+  height: 15px;
+}
+.footer__container .footer__information .footer__container-social-media .footer__list-social-media .footer__item-social-media .footer__image-social-media:hover path {
+  fill: #963596;
+  transition: 1s;
+}
+.footer__container .footer__information .footer__container-social-media .footer__list-social-media .youtube {
+  width: 17px;
+  height: 18px;
+}
+.footer__container .footer__development {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 13px;
+  gap: 4px;
+  border-top: 2px solid #000202;
+}
+.footer__container .footer__icon {
+  width: 15px;
+  height: 10px;
+}
+.footer__container .footer__description {
+  font-size: 8px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=styles.css.map */

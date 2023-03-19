@@ -1,0 +1,77 @@
+html,
+body,
+div,
+span,
+iframe,
+button,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img,
+small,
+strong,
+center,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+article,
+embed,
+figure,
+footer,
+header,
+nav,
+section,
+video {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  font-style: none;
+  text-decoration: none;
+
+  list-style: none;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: $color-white;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border: 3px solid $color-primary;
+    border-radius: 20px;
+
+    background-color: $color-primary;
+  }
+}
+
+@font-face {
+  font-family: "Tungsten";
+  src: url("../../assets/fonts/Tungsten-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "TungstenLight";
+  src: url("../../assets/fonts/Tungsten-Light.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "TungstenBold";
+  src: url("../../assets/fonts/Tungsten-Bold.otf") format("opentype");
+}

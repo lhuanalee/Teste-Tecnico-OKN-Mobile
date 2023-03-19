@@ -1,0 +1,48 @@
+.main__section-careers {
+  @include flex-box(flex, column, center, center);
+
+  padding: 35px 24px;
+
+  background-color: $color-white-background;
+
+  .careers__title {
+    @include text(15px, 400);
+
+    font-family: "Tungsten";
+  }
+
+  .careers__list {
+    @include flex-box(flex, row, center, center);
+
+    max-width: 500px;
+
+    margin-top: 27px;
+
+    flex-wrap: wrap;
+    gap: 38px;
+
+    .careers__item {
+      @include flex-box(flex, column, center, center);
+
+      min-width: 144px;
+
+      padding: 8px 20px 23px;
+
+      gap: 10px;
+
+      border: 1px solid transparent;
+      border-radius: 10px;
+
+      background-color: $color-primary;
+
+      .careers__subtitle {
+        @include text(12px, 400);
+
+        font-family: "Tungsten";
+        letter-spacing: 0.08em;
+
+        color: $color-white;
+      }
+    }
+  }
+}

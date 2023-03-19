@@ -1,0 +1,39 @@
+.main__section-who-are {
+  @include flex-box(flex, column, center, center);
+
+  width: 100%;
+
+  padding: 35px;
+
+  .who-are__title {
+    @include text(30px, 400);
+
+    font-family: "TungstenBold";
+  }
+
+  .who-are__figure {
+    width: 70%;
+    max-width: 230px;
+
+    margin-top: 15px;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+
+    .who-are__image {
+      width: 100%;
+      border-radius: 10px;
+    }
+  }
+
+  .who-are__description {
+    @include text(12px, 400);
+
+    max-width: 555px;
+
+    margin-top: 33px;
+
+    text-align: center;
+  }
+}

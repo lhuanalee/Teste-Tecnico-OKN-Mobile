@@ -61,6 +61,33 @@
         }
       }
     }
+
+    .footer__back {
+      @include flex-box(flex, row, center, center);
+
+      border: none;
+
+      background-color: transparent;
+
+      .back__arrow {
+        @include flex-box(flex, row, flex-start, flex-start);
+
+        @include text(12px, 400);
+
+        gap: 7px;
+
+        color: $color-black;
+
+        .back__image {
+          width: 12px;
+          height: 12px;
+        }
+      }
+
+      .back__title {
+        @include text(12px, 400);
+      }
+    }
   }
 
   .footer__development {

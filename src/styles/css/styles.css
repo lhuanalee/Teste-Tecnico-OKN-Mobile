@@ -73,7 +73,9 @@ body::-webkit-scrollbar-thumb {
   align-items: center;
   width: 100vw;
   padding: 11px 24px;
+  position: fixed;
   background-color: #000202;
+  z-index: 2;
 }
 .header__container .header__logo-figure .header__logo-image {
   width: 55px;
@@ -84,18 +86,27 @@ body::-webkit-scrollbar-thumb {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 15px;
+  gap: 8px;
 }
 .header__container .header__search-menu .header__search {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  padding: 4px 3px;
+  gap: 7px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+}
+.header__container .header__search-menu .header__search:focus-within {
+  border: 2px solid #ffffff;
 }
 .header__container .header__search-menu .header__search .search__input {
   width: 140px;
   border: none;
+  color: #ffffff;
   background-color: transparent;
+  outline: none;
 }
 .header__container .header__search-menu .header__search .search__input::placeholder {
   color: transparent;
@@ -120,6 +131,7 @@ body::-webkit-scrollbar-thumb {
   justify-content: flex-start;
   align-items: flex-start;
   width: 45vw;
+  max-width: 180px;
   padding: 10px 12px 0 21px;
   position: absolute;
   top: 0;
@@ -153,6 +165,9 @@ body::-webkit-scrollbar-thumb {
   color: #ffffff;
 }
 
+.main__container {
+  padding-top: 55px;
+}
 .main__container .main__section-carousel .carousel__list {
   display: flex;
   flex-direction: column;
@@ -170,16 +185,19 @@ body::-webkit-scrollbar-thumb {
   transform: rotate(-180deg);
 }
 .main__container .main__section-carousel .carousel__list .carousel__item {
+  display: none;
+}
+.main__container .main__section-carousel .carousel__list .carousel__item--visible {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.main__container .main__section-carousel .carousel__list .carousel__item .carousel__images {
+.main__container .main__section-carousel .carousel__list .carousel__item--visible .carousel__image {
   width: 100vw;
   object-fit: cover;
 }
-.main__container .main__section-carousel .carousel__list .carousel__item .carousel__article {
+.main__container .main__section-carousel .carousel__list .carousel__item--visible .carousel__article {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,13 +208,13 @@ body::-webkit-scrollbar-thumb {
   bottom: 50px;
   z-index: 1;
 }
-.main__container .main__section-carousel .carousel__list .carousel__item .carousel__article .carousel__title {
+.main__container .main__section-carousel .carousel__list .carousel__item--visible .carousel__article .carousel__title {
   font-size: 32px;
   font-weight: 400;
   font-family: "TungstenBold";
   color: #ffffff;
 }
-.main__container .main__section-carousel .carousel__list .carousel__item .carousel__article .carousel__description {
+.main__container .main__section-carousel .carousel__list .carousel__item--visible .carousel__article .carousel__description {
   font-size: 11px;
   font-weight: 400;
   color: #ffffff;
@@ -221,6 +239,12 @@ body::-webkit-scrollbar-thumb {
   border: 1px solid #ffffff;
   border-radius: 50%;
   background-color: transparent;
+}
+.main__container .main__section-carousel .carousel__actions .actions__button--one:hover,
+.main__container .main__section-carousel .carousel__actions .actions__button--two:hover,
+.main__container .main__section-carousel .carousel__actions .actions__button--three:hover,
+.main__container .main__section-carousel .carousel__actions .actions__button--four:hover {
+  background-color: #ffffff;
 }
 
 .main__section-services {
@@ -554,6 +578,32 @@ body::-webkit-scrollbar-thumb {
 .footer__container .footer__information .footer__container-social-media .footer__list-social-media .youtube {
   width: 17px;
   height: 18px;
+}
+.footer__container .footer__information .footer__back {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+}
+.footer__container .footer__information .footer__back .back__arrow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  font-size: 12px;
+  font-weight: 400;
+  gap: 7px;
+  color: #000202;
+}
+.footer__container .footer__information .footer__back .back__arrow .back__image {
+  width: 12px;
+  height: 12px;
+}
+.footer__container .footer__information .footer__back .back__title {
+  font-size: 12px;
+  font-weight: 400;
 }
 .footer__container .footer__development {
   display: flex;
